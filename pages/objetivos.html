@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="../img/maletin.png" />
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,600&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d6f136d242.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/nav.js"></script>
+    <script src="../js/scrollreveal.js"></script>
+  </head>
+  <body>
+    <div class="bodyDiv">
+      <header>
+        <nav>
+          <div class="navegacionDesktop">
+            <div class="glosarioDiv">
+              <div class="navVectores">
+                <a href="../index.html"
+                  ><i class="fa-solid fa-house"></i>
+                  <h2>INICIO</h2></a
+                >
+              </div>
+              <div class="navVectores">
+                <a href="trabajo.html"
+                  ><i class="fa-solid fa-briefcase"></i>
+                  <h2>TRABAJOS</h2></a
+                >
+              </div>
+              <div class="navVectores">
+                <a href="conocimientos.html"
+                  ><i class="fa-solid fa-graduation-cap iconomedio"></i>
+                  <h2>CONOCIMIENTOS</h2></a
+                >
+              </div>
+              <div class="navVectores">
+                <a href="#"
+                  ><i class="fa-solid fa-flag-checkered" id="select"></i>
+                  <h2>OBJETIVOS</h2></a
+                >
+              </div>
+              <div class="navVectores">
+                <a href="sobremi.html"
+                  ><i class="fa-solid fa-user"></i>
+                  <h2>SOBRE MI</h2></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="navegacionMobile">
+            <a href="../index.html">
+              <i class="fa-solid fa-house"></i>
+            </a>
+            <button onclick="abrirMenu()" id="hamburguesa">
+              <i class="fa-solid fa-bars" id="hamburguesaLogo"></i>
+            </button>
+            <ul class="contenedorMenu" id="contenedorMenu">
+              <li>
+                <a href="conocimientos.html"><h2>CONOCIMIENTOS</h2></a>
+              </li>
+              <li>
+                <a href="trabajo.html"><h2>TRABAJOS</h2></a>
+              </li>
+              <li>
+                <a href="sobremi.html"><h2>SOBRE MI</h2></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <div class="titulo">
+        <h1>OBJETIVOS</h1>
+      </div>
+      <div class="contenedorTarjeta">
+        <div class="tarjetaTexto">
+          <p>
+            mi principal objetivo es mejorar continuamente mis habilidades. Esto
+            incluye aprender nuevos lenguajes de programación, profundizar en
+            los lenguajes que ya conozco y adquirir experiencia en el desarrollo
+            de proyectos web complejos.
+          </p>
+          <img src="../img/aprendizaje.png" alt="aprendizaje">
+        </div>
+      </div>
+      <div class="contenedorTarjeta">
+        <div class="tarjetaTexto">
+          <p>
+            la colaboración es fundamental en el desarrollo web, y como
+            programador web, mi objetivo es aprender a trabajar en equipo de
+            manera efectiva. Esto incluye comunicar mis ideas y soluciones de
+            manera clara y efectiva, colaborar en proyectos y aprender de los
+            miembros del equipo más experimentados.
+          </p>
+          <img src="../img/equipo.png" alt="trabajo en equipo">
+        </div>
+      </div>
+      <div class="contenedorTarjeta">
+        <div class="tarjetaTexto">
+          <p>
+            Mantenerme actualizado en las tendencias y tecnologías de la
+            industria. El mundo del desarrollo web está en constante evolución,
+            y mi objetivo es mantenerme al día con las últimas tendencias y
+            tecnologías. Esto incluye asistir a eventos de la industria, leer
+            publicaciones especializadas y estar siempre en busca de nuevas
+            oportunidades para aprender y crecer como programador web.
+          </p>
+          <img src="../img/actualizar.png" alt="actualizar">
+        </div>
+      </div>
+      <footer>
+        <div class="FooterDiv">
+          <a href="#" target="_blank">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+        <div class="FooterDiv">
+          <a href="#" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </div>
+        <div class="FooterDiv">
+          <a href="#" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </footer>
+      <script src="../js/pages.js"></script>
+    </div>
+  </body>
+</html>

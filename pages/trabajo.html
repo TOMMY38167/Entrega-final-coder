@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio de proyectos realizados en Argentina, enfocado en diseño gráfico, web y multimedia"
+    />
+    
+    <link rel="icon" type="image/png" href="../img/maletin.png" />
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,600&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d6f136d242.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/nav.js"></script>
+    <script src="../js/scrollreveal.js"></script>
+  </head>
+  <body>
+    <div class="bodyDiv">
+      <!--HEATHER-->
+      <header>
+        <nav>
+          <div class="navegacionDesktop">
+            <div class="glosarioDiv">
+              <div class="navVectores">
+                <a href="../index.html"
+                  ><i class="fa-solid fa-house"></i>
+                  <h2>INICIO</h2></a
+                >
+              </div>
+              <div class="navVectores">
+                <a href="#"
+                  ><i class="fa-solid fa-briefcase" id="select"></i>
+                  <h2>TRABAJOS</h2></a
+                >
+              </div>
+              <div class="navVectores">
+                <a href="conocimientos.html"
+                  ><i class="fa-solid fa-graduation-cap iconomedio"></i>
+                  <h2>CONOCIMIENTOS</h2></a
+                >
+              </div>
+              <div class="navVectores">
+                <a href="objetivos.html"
+                  ><i class="fa-solid fa-flag-checkered"></i>
+                  <h2>OBJETIVOS</h2></a
+                >
+              </div>
+              <div class="navVectores">
+                <a href="sobremi.html"
+                  ><i class="fa-solid fa-user"></i>
+                  <h2>SOBRE MI</h2></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="navegacionMobile">
+            <a href="../index.html">
+              <i class="fa-solid fa-house"></i>
+            </a>
+            <button onclick="abrirMenu()" id="hamburguesa">
+              <i class="fa-solid fa-bars" id="hamburguesaLogo"></i>
+            </button>
+            <ul class="contenedorMenu" id="contenedorMenu">
+              <li>
+                <a href="conocimientos.html"><h2>CONOCIMIENTOS</h2></a>
+              </li>
+              <li>
+                <a href="objetivos.html"><h2>OBJETIVOS</h2></a>
+              </li>
+              <li>
+                <a href="sobremi.html"><h2>SOBRE MI</h2></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!--MAIN-->
+      <main>
+        <div class="titulo">
+          <h1>TRABAJOS REALIZADOS</h1>
+        </div>
+        <div class="imgdiv">
+          <div class="borde">
+            <img src="../img/confesiones1.png" alt="CapturaDePantalla" />
+          </div>
+          <div class="tarjeta">
+            <p>
+              La web Confisanosloquequieras.com se ha creado para una cuenta de
+              Instagram con el fin de que las personas que la siguen y quieran
+              confesarse anónimamente puedan hacerlo sin temor a ser
+              identificadas aún por los administradores de la misma.
+            </p>
+          </div>
+        </div>
+        <div class="imgdiv">
+          <div class="tarjeta">
+            <p>
+              Confesarse es muy sencillo solo tenés que dar click en el link que
+              aparece en la descripción de la página y te redirecciona a la web
+              confesanosloquequieras.com
+            </p>
+          </div>
+          <div class="borde">
+            <img src="../img/confesiones2.png" alt="CapturaDePantalla" />
+          </div>
+        </div>
+        <div class="imgdiv">
+          <div class="borde">
+            <img src="../img/confesiones3.png" alt="CapturaDePantalla" />
+          </div>
+          <div class="tarjeta">
+            <p>
+              Luego de confesarte te aparecera un mensaje aleatorio mas dos
+              opciones las cuales te permitiran redirigirte a la pagina de
+              instagram o volver a confesarte nuevamente.
+            </p>
+          </div>
+        </div>
+      </main>
+      <!--FOOTER-->
+      <footer>
+        <div class="FooterDiv">
+          <a href="#" target="_blank">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+        <div class="FooterDiv">
+          <a href="#" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </div>
+        <div class="FooterDiv">
+          <a href="#" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </footer>
+      <script src="../js/pages.js"></script>
+    </div>
+  </body>
+</html>

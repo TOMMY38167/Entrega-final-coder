@@ -1,0 +1,63 @@
+//VARIABLES
+$fondoClaro: #566981;
+$fondoOscuro: #34344e;
+$fondoTarjeta: #3e4560;
+$fondoContenedor: #3a415a;
+$colorBorde: #252537;
+$fuente: "Roboto Serif", serif;
+
+@mixin dFlex($justifyContent, $alignItems, $flexDirection) {
+  display: flex;
+  @if $justifyContent != "" {
+    justify-content: $justifyContent;
+  }
+  @if $alignItems != "" {
+    align-items: $alignItems;
+  }
+  @if $flexDirection != "" {
+    flex-direction: $flexDirection;
+  }
+}
+
+@keyframes textShine {
+    0% {
+      background-position: 0% 80%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  @keyframes growDown {
+    0% {
+      transform: scaleY(0);
+    }
+    80% {
+      transform: scaleY(1.1);
+    }
+    100% {
+      transform: scaleY(1);
+    }
+  }
+  @keyframes shrinkUp {
+    0% {
+      transform: scaleY(1);
+    }
+    100% {
+      transform: scaleY(0);
+    }
+  }
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+  }
+  @keyframes snow-fall {
+    0% {
+        top: -10px;
+    }
+    100% {
+        top: calc(100vh + 5px);
+    }
+}

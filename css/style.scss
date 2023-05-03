@@ -1,0 +1,251 @@
+@import "header";
+@import "footer";
+@import "media";
+@import "utils";
+
+body {
+  /* 100vw NO TIENE EN CUENTA LA BARRA SCROLL */
+  /* ESTE CALCULO LE RESTA ESA DIFERENCIA */ /* CORTESIA STACK OVERFLOW*/
+  width: calc(100vw - (100vw - 100%));
+  background: rgb(203, 218, 213);
+  background: linear-gradient(
+    0deg,
+    rgba(203, 218, 213, 1) 0%,
+    rgba(86, 105, 129, 1) 100%
+  );
+  animation-play-state: running;
+  transform-style: preserve-3d;
+  font-family: $fuente;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  .snow {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -15px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: -1;
+
+    .flake {
+      position: absolute;
+      background-color: #c4c0c0;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #fdfdfd;
+      pointer-events: none;
+      animation: snow-fall linear infinite;
+    }
+  }
+
+  .mostrar {
+    animation: growDown 300ms ease-in-out forwards !important;
+    transform-origin: top center !important;
+  }
+
+  .icon {
+    color: $colorBorde;
+  }
+
+  //div que contiene todo que lo puse ahi para que js me tome la animacion porque la cochina degenerada de body solo no lo hacia maldito codigo del infierno
+  .bodyDiv {
+    @include dFlex(space-between, "", column);
+    min-height: 100vh;
+
+    a {
+      text-decoration: none;
+    }
+
+    /* VECTORES */
+    .ContenedorVectores {
+      width: 100%;
+      max-width: 100%;
+      text-align: center;
+      margin-top: 2%;
+      background-color: rgba(86, 105, 129, 0.95);
+      @include dFlex(space-evenly, center, row);
+
+      .tarjetaHome {
+        aspect-ratio: 1 / 1;
+        width: 15%;
+        background: rgb(203, 218, 213);
+        background: radial-gradient(
+          circle,
+          rgba(203, 218, 213, 1) 0%,
+          rgba(82, 101, 124, 1) 100%
+        );
+        @include dFlex(space-around, center, column);
+        margin-top: 3%;
+        margin-bottom: 2%;
+        box-shadow: -1px -1px #52657c, -2px -2px #5c6f84, -3px -3px #8596a1,
+          -4px -4px #97a8af, -5px -5px #a7b7ba, -6px -6px #869b94;
+
+        i {
+          font-size: 7rem;
+          color: $fondoClaro;
+          mask-image: linear-gradient(
+            45deg,
+            #000 25%,
+            rgba(0, 0, 0, 0.1) 50%,
+            #000 75%
+          );
+          mask-size: 800%;
+          mask-position: 0;
+          -webkit-mask-image: linear-gradient(
+            45deg,
+            #000 25%,
+            rgba(0, 0, 0, 0.1) 50%,
+            #000 75%
+          );
+          -webkit-mask-size: 800%;
+          -webkit-mask-position: 0;
+          transition: 1s;
+        }
+        p {
+          font-size: 80%;
+          color: $colorBorde;
+        }
+        .indexIconos {
+          i:hover {
+            transition: mask-position 2s ease, -webkit-mask-position 2s ease;
+            mask-position: 120%;
+            opacity: 1;
+            -webkit-mask-position: 120%;
+          }
+        }
+      }
+    }
+
+    /* TRABAJOS */
+
+    .titulo {
+      text-align: center;
+      width: 100%;
+      margin-top: 3%;
+      margin-bottom: 3%;
+      color: white;
+      font-size: 2rem;
+      z-index: -1;
+    }
+    .imgdiv {
+      width: 100%;
+      background-color: $fondoOscuro;
+      margin-top: 2%;
+      margin-bottom: 2%;
+      @include dFlex(space-around, center, "");
+      padding-top: 13px;
+      padding-bottom: 13px;
+
+      .borde {
+        display: flex;
+        width: 40%;
+        border-width: 7px;
+        border-style: solid;
+        border-color: $colorBorde;
+      }
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+        padding: 0%;
+        margin: 0;
+      }
+      .tarjeta {
+        display: flex;
+        width: 50%;
+        height: 100%;
+        background-color: $fondoTarjeta;
+        color: white;
+        margin-top: 1%;
+        margin-bottom: 1%;
+        padding: 1.5%;
+        box-shadow: -1px -1px #52657c, -2px -2px #5c6f84, -3px -3px #8596a1,
+          -4px -4px #97a8af, -5px -5px #a7b7ba, -6px -6px #869b94;
+      }
+      /*CONOCIMIENTOS*/
+
+      .xxl {
+        width: 80%;
+      }
+      i {
+        font-size: 12rem;
+        color: #89a7b1;
+      }
+    }
+    .vector {
+      justify-content: space-evenly;
+    }
+    //separado de la otra tarjeta porque la clase se reutiliza
+    .tarjeta {
+      p {
+        font-size: 1.3rem;
+      }
+    }
+
+    /*OBJETIVOS*/
+    .contenedorTarjeta {
+      @include dFlex(center, "", "");
+      .tarjetaTexto {
+        height: 100%;
+        width: 90%;
+        background-color: $fondoOscuro;
+        @include dFlex(space-around, center, row);
+        margin-top: 3%;
+        margin-bottom: 2%;
+        padding-left: 3%;
+        padding-right: 3%;
+        box-shadow: -1px -1px #52657c, -2px -2px #5c6f84, -3px -3px #8596a1,
+          -4px -4px #97a8af, -5px -5px #a7b7ba, -6px -6px #869b94;
+        color: white;
+        text-align: center;
+        font-size: 1pc;
+
+        p {
+          padding: 2%;
+          margin: auto;
+          font-size: 1.2rem;
+        }
+        img {
+          width: 16rem;
+          height: 16rem;
+          border-radius: 25px;
+          border-style: solid;
+          border-width: 0;
+          padding-top: 7px;
+          padding-bottom: 7px;
+        }
+      }
+
+      /*SOBRE MI*/
+      ul {
+        list-style: none;
+      }
+      .Lista {
+        align-items: start;
+        text-align: start;
+        font-size: 1.5rem;
+        p {
+          padding: 3%;
+          margin: auto;
+          padding-left: 3%;
+          padding-right: 3%;
+          text-decoration: none;
+          font-family: "Franklin Gothic Medium", "Arial Narrow", Arial,
+            sans-serif;
+        }
+      }
+    }
+  }
+}
+body::-webkit-scrollbar {
+  width: 10px;
+  background: $fondoClaro;
+}
+body::-webkit-scrollbar-thumb {
+  background: $colorBorde;
+  border-radius: 3px;
+}

@@ -1,0 +1,32 @@
+body {
+  .bodyDiv {
+    /*FOOTER*/
+    footer {
+      width: 100%;
+      @include dFlex(space-evenly, "", "");
+      background-color: $fondoContenedor;
+      margin-top: 3%;
+      padding-top: 1%;
+      padding-bottom: 1%;
+      .FooterDiv {
+        white-space: nowrap;
+        @include dFlex("", center, row);
+        a {
+          i {
+            font-size: 2rem;
+            padding-right: 10%;
+            color: white;
+          }
+          i :hover {
+            transform: scale(1);
+            transition: 0;
+            margin-left: 3%;
+          }
+        }
+        p {
+          padding-left: 10%;
+        }
+      }
+    }
+  }
+}
